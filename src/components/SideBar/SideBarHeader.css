@@ -1,0 +1,29 @@
+.Side-bar__header {
+    display: flex;
+    /* border: 2px solid black; */
+    /* background-color: red; */
+    flex-direction: row;
+    /* flex: 1; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Side-bar__icon {
+    /* min-height: 100%; */
+    /* background-color: black; */
+    /* border: 2px solid black; */
+    margin-right: 0.25rem;
+    order: 2;
+    flex: 0.1;
+}
+
+.Side-bar__header_text {
+    /* border: 2px solid black; */
+    margin: 0;
+    /* flex: 0.9; */
+    order: 1;
+    text-align: center;
+    font-size: 1rem;
+}

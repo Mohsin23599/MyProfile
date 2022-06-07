@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
   return (
     <div className="App">
+      <SideBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Mohsin <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"

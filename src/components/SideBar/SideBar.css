@@ -1,0 +1,22 @@
+.Side-bar {
+    /* border: 2px solid black; */
+    border-right: 2px solid black;
+    /* background-color: green; */
+    background: #4d4d47;
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    flex: 1;
+    flex-direction: column;
+    transition: 300ms ease-out;
+}
+
+.Side-bar__logo {
+    /* image-resolution: unset; */
+    /* object-fit: contain; */
+    height: auto;
+    transition: 300ms ease-out;
+    /* border: 2px solid black; */
+    align-self: center;
+}
