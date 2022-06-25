@@ -1,22 +1,36 @@
+:root{
+    --mobile-top: "-100%";
+}
+
 .Side-bar {
-    /* border: 2px solid black; */
     border-right: 2px solid black;
-    /* background-color: green; */
     background: #4d4d47;
-    min-width: 100vw;
     height: 100vh;
     display: flex;
     position: fixed;
-    flex: 1;
     flex-direction: column;
     transition: 300ms ease-out;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 
 .Side-bar__logo {
-    /* image-resolution: unset; */
-    /* object-fit: contain; */
-    height: auto;
-    transition: 300ms ease-out;
-    /* border: 2px solid black; */
+    height: 20vmin;
+    transition: 500ms ease-out;
     align-self: center;
+}
+
+@media screen and (max-width: 768px){
+    .Side-bar{
+        right: 0;
+        left: auto;
+        right: var(--mobile-top);
+        flex: 1;
+    }
+    .Side-bar__logo {
+        display: none;
+    }
 }

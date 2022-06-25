@@ -1,26 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import SideBar from './components/SideBar/SideBar';
+import "./App.css";
+import SideBar from "./components/SideBar/SideBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Header } from "./components/Header/Header";
+import React, { useState } from "react";
 
 function App() {
+  const [mobileNavbarIsOpen, setMobileNavBarIsOpen] = useState(false);
+  const handlerIsOpen = () =>
+    setMobileNavBarIsOpen((prevState) => {
+      return !prevState;
+    });
+
   return (
-    <div className="App">
-      <SideBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Mohsin <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router className="App">
+      <SideBar isOpen={mobileNavbarIsOpen} setIsOpen={handlerIsOpen} />
+      <Header
+        mobileNavBarIsOpen={mobileNavbarIsOpen}
+        setMobileNavBarIsOpen={handlerIsOpen}
+      />
+    </Router>
   );
 }
 

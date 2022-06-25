@@ -1,25 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./SideBar.css";
 import SideBarHeader from "./SideBarHeader";
 import logo from "../../assets/images/side-bar_logo.png";
+import SideBarItem from "./SideBarItem";
+import SideBarFooter from "./SideBarFooter";
 
-const SideBar = () => {
-  const [sideBarWidth, setSideBarWidth] = useState("15vw");
-  const onChangeCompressIconHandler = (compressed) =>{
-    if (compressed){
-      setSideBarWidth("15vw");
-    }
-    else{
-      setSideBarWidth("5vw");
-    }
-  }
+function setMobileIsOpen(newTop) {
+  document.documentElement.style.setProperty("--mobile-top", newTop);
+}
+
+const SideBar = (props) => {
+  useEffect(() => {
+    props.isOpen ? setMobileIsOpen("0%") : setMobileIsOpen("-100%");
+  }, [props.isOpen]);
+
+  const onChangeCompressIconHandler = () => {
+    props.setIsOpen();
+    props.isOpen ? setMobileIsOpen("-100%") : setMobileIsOpen("0%");
+  };
 
   return (
-    <div className="Side-bar" style={{minWidth: sideBarWidth}}>
-      <SideBarHeader onChangeCompressIcon={onChangeCompressIconHandler}/>
-      {/* <FaEllipsisV className="Compress-icon"/> */}
-      {/* <h1>Side Bar</h1> */}
-      <img src={logo} alt="My Logo" className="Side-bar__logo" style={{width: (sideBarWidth === "5vw")? "4vw" : "8vw", }}/>
+    <div
+      className="Side-bar"
+      style={{ width: props.isOpen ? "fit-content" : "fit-content" }}
+    >
+      <SideBarHeader
+        isOpen={props.isOpen}
+        onChangeCompressIcon={onChangeCompressIconHandler}
+      />
+      <img
+        src={logo}
+        alt="My Logo"
+        className="Side-bar__logo"
+        style={{ height: props.isOpen ? "20vmin" : "10vmin" }}
+      />
+      <SideBarItem isOpen={props.isOpen} />
+      <SideBarFooter isOpen={props.isOpen} />
     </div>
   );
 };

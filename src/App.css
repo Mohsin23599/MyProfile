@@ -1,11 +1,7 @@
 .App {
   display: flex;
-  /* flex: 1; */
-  /* flex-direction: row; */
-  /* background-color: blue; */
-  /* min-height: 100vh; */
   height: 100vh;
-  /* flex-wrap: wrap; */
+  margin: 0;
 }
 
 
