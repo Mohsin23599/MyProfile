@@ -1,9 +1,14 @@
+:root {
+  --page-height: 730px;
+}
+
+
 .App {
   display: flex;
   height: 100vh;
   margin: 0;
+  flex-direction: column;
 }
-
 
 .App-logo {
   height: 40vmin;
@@ -44,4 +49,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  margin: 0;
 }

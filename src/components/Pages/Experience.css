@@ -1,0 +1,18 @@
+.Experience {
+    position: relative;
+    height: var(--page-height);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 64px;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
+
+
+@media screen and (max-width: 768px){
+    .Experience {
+        font-size:18px;
+    }
+}

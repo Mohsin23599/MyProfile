@@ -9,25 +9,25 @@ const SideBarItemData = [
   {
     icon: <FaUserAlt className="Side-bar__icon" size={20} />,
     title: "About Me",
-    link: "/",
+    link: "About",
     cName: "Side-bar__item-text",
   },
   {
     icon: <FaBookReader className="Side-bar__icon" size={20} />,
     title: "Education",
-    link: "/Education",
+    link: "Education",
     cName: "Side-bar__item-text",
   },
   {
     icon: <MdWork className="Side-bar__icon" size={20} />,
     title: "Experience",
-    link: "/Experience",
+    link: "Experience",
     cName: "Side-bar__item-text",
   },
   {
     icon: <FaClipboardList className="Side-bar__icon" size={20} />,
     title: "Projects",
-    link: "/Projects",
+    link: "Projects",
     cName: "Side-bar__item-text",
   },
 ];
@@ -44,7 +44,13 @@ const SideBarItem = (props) => {
         {SideBarItemData.map((item, index) => {
           return (
             <motion.li key={index} className={item.cName}>
-              <LinkS to={item.link} className={"Side-bar__scroll-link"}>
+              <LinkS
+                to={item.link}
+                className={"Side-bar__scroll-link"}
+                style={{
+                  justifyContent: props.isOpen ? "flex-start" : "center",
+                }}
+              >
                 {item.icon}
                 <span>{item.title}</span>
               </LinkS>

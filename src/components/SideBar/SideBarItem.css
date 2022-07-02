@@ -47,10 +47,10 @@
     color: black;
     /* box-shadow: inset 1px 1px 1px 1px rgb(5,230,230); */
 }
-.Side-bar__scroll-link:active{
+/* .Side-bar__scroll-link::after{
+    position: relative;
     background-color: red;
-}
-
+} */
 
 span{
     display: var(--span-display);

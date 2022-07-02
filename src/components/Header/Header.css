@@ -8,6 +8,8 @@
     background-color: aqua;
     margin: 0;
     display: none;
+    position: fixed;
+    width: 100%;
 }
 
 .Header__icon {

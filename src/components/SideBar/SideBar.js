@@ -22,7 +22,8 @@ const SideBar = (props) => {
   return (
     <div
       className="Side-bar"
-      style={{ width: props.isOpen ? "fit-content" : "fit-content" }}
+      id="Side-bar_id"
+      style={{ width: props.isOpen ? "180px" : "60px" }}
     >
       <SideBarHeader
         isOpen={props.isOpen}
@@ -32,7 +33,7 @@ const SideBar = (props) => {
         src={logo}
         alt="My Logo"
         className="Side-bar__logo"
-        style={{ height: props.isOpen ? "20vmin" : "10vmin" }}
+        style={{ height: props.isOpen ? "20vmin" : "7vmin" }}
       />
       <SideBarItem isOpen={props.isOpen} />
       <SideBarFooter isOpen={props.isOpen} />
