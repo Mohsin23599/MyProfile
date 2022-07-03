@@ -22,7 +22,7 @@ const EducationDetails = [
 export const Education = () => {
   return (
     <div id="Education" className="Education">
-      <h2>My Education Journey</h2>
+      <h2 style={{marginTop: "0px"}}>My Education Journey</h2>
       {EducationDetails.map((item, index) => {
         return (
           <TimelineCard left={index & 1}>
@@ -30,8 +30,8 @@ export const Education = () => {
               className="Education-items"
               style={
                 !(index & 1)
-                  ? { paddingLeft: "10%", alignItems: "flex-start" }
-                  : { paddingRight: "10%", alignItems: "flex-end" }
+                  ? { paddingLeft: "10%", alignItems: "flex-start", textAlign: "start" }
+                  : { paddingRight: "10%", alignItems: "flex-end", textAlign: "end" }
               }
             >
               <div className="Education-h1">{item.collegeName}</div>
