@@ -3,8 +3,14 @@ import "./TimelineCard.css";
 
 export const TimelineCard = (props) => {
   return (
-    <div className="TimelineCard">
-      <span className="Timeline-bar" style={{ order: props.left ? 2 : 1, textAlign: props.left ? "end" : "start", }}>
+    <div className="TimelineCard" id={props.key}>
+      <span
+        className="Timeline-bar"
+        style={{
+          order: props.left ? 2 : 1,
+          textAlign: props.left ? "end" : "start",
+        }}
+      >
         <span
           className="Vertical"
           style={props.left ? { left: "-2px" } : { right: "-2px" }}

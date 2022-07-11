@@ -1,5 +1,5 @@
 :root {
-  --page-height: 730px;
+  --page-height: 100vh;
 }
 
 
@@ -8,6 +8,7 @@
   height: 100vh;
   margin: 0;
   flex-direction: column;
+  /* box-sizing: border-box; */
 }
 
 .App-logo {
