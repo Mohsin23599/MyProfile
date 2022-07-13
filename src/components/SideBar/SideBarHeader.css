@@ -11,7 +11,8 @@
     min-height: 100%;
     padding-right: 0.25rem;
     padding-left: 0.25rem;
-    color: #f5f5f5;
+    cursor: pointer;
+    color: #44b2ff;
 }
 
 .Side-bar__mobile_header_icon {
@@ -20,7 +21,7 @@
     padding-right: 0.5rem;
     padding-top: 0.5rem;
     transform: rotate(45deg);
-    color: #f5f5f5;
+    color: #44b2ff;
 }
 
 

@@ -20,25 +20,33 @@ const EducationDetails = [
 ];
 
 export const Education = () => {
+  const timeCardStyles = {
+    outCircleColor: "#1f3e6d",
+    inCircleColor: "#070d17",
+  };
   return (
     <div id="Education" className="Education">
-      <h2 style={{ marginTop: "-2.5rem", paddingBottom: "1rem" }}>
+      <h2 style={{ margin: "0", marginBottom: "1.63em", color: "#ffffff" }}>
         My Education Journey
       </h2>
       {EducationDetails.map((item, index) => {
         return (
-          <TimelineCard key={`Education-${index}`} left={index & 1}>
+          <TimelineCard
+            key={`Education-${index}`}
+            left={index & 1}
+            style={timeCardStyles}
+          >
             <div
               className="Education-items"
               style={
                 !(index & 1)
                   ? {
-                      paddingLeft: "10%",
+                      paddingLeft: "2em",
                       alignItems: "flex-start",
                       textAlign: "start",
                     }
                   : {
-                      paddingRight: "10%",
+                      paddingRight: "2em",
                       alignItems: "flex-end",
                       textAlign: "end",
                     }

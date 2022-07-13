@@ -46,9 +46,15 @@ const SideBarItem = (props) => {
             <motion.li key={index} className={item.cName}>
               <LinkS
                 to={item.link}
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
                 className={"Side-bar__scroll-link"}
+                offset={0}
                 style={{
                   justifyContent: props.isOpen ? "flex-start" : "center",
+                  paddingLeft: props.isOpen ? "1rem" : "0",
                 }}
               >
                 {item.icon}

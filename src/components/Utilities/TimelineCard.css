@@ -27,14 +27,14 @@
 }
 
 .Mobile-Circle {
-    display: none;
-    position: absolute;
     display: block;
+    position: absolute;
     width: 12px;
     border-radius: 100%;
     background: black;
     top: 47%;
     bottom: 47%;
+    z-index: 2;
 }
 
 .Circle {
@@ -42,9 +42,10 @@
     display: block;
     width: 32px;
     border-radius: 100%;
-    background: black;
+    background: #f3d776;
     top: 42%;
     bottom: 42%;
+    z-index: 2;
 }
 
 .Timeline-content {
@@ -52,11 +53,11 @@
     flex: 1;
 }
 
-@media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){
     .Mobile-Circle {
         display: block;
     }
     .Circle {
-        display: none;
+        display: block;
     }
-}
+} */

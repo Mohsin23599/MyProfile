@@ -23,18 +23,17 @@
     justify-content: center;
     height: 10%;
     align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
+    
 }
 
 .Side-bar__scroll-link {
     text-decoration: none;
     color: #f5f5f5;
     font-size: 18px;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     display: flex;
-    padding: 0px 16px;
     border-radius: 4px;
     align-items: center;
     justify-content: flex-start;
@@ -43,14 +42,14 @@
 }
 
 .Side-bar__scroll-link:hover{
-    background-color: aqua;
+    background-color: #aaefff;
     color: black;
     /* box-shadow: inset 1px 1px 1px 1px rgb(5,230,230); */
 }
-/* .Side-bar__scroll-link::after{
-    position: relative;
-    background-color: red;
-} */
+.active {
+    background-color: #44b2ff;
+    color: black;
+}
 
 span{
     display: var(--span-display);

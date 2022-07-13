@@ -1,12 +1,12 @@
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { BodyContent } from "./components/BodyContent/BodyContent";
-import React, { useEffect, useState } from "react";
+import { Footer } from "./components/Pages/Footer";
+import React, { useState } from "react";
 
 function App() {
-  const sideBarDOM = document.getElementById("Side-bar_id");
   const [mobileNavbarIsOpen, setMobileNavBarIsOpen] = useState(false);
 
   const handlerIsOpen = () => {
@@ -23,6 +23,7 @@ function App() {
           setMobileNavBarIsOpen={handlerIsOpen}
         />
         <BodyContent isOpen={mobileNavbarIsOpen} />
+        <Footer />
       </div>
     </Router>
   );

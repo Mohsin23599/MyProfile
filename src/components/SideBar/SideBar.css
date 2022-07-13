@@ -3,8 +3,8 @@
 }
 
 .Side-bar {
-    border-right: 2px solid black;
-    background: #4d4d47;
+    /* border-right: 2px solid black; */
+    background: rgb(5 11 19);
     height: 100vh;
     display: flex;
     position: fixed;

@@ -16,25 +16,33 @@ const ExperienceDetails = [
 ];
 
 export const Experience = () => {
+  const timeCardStyles = {
+    inCircleColor: "#fff",
+    outCircleColor: "#070d17",
+  };
   return (
     <div id="Experience" className="Experience">
-      <h2 style={{ marginTop: "-2.5rem", paddingBottom: "1rem" }}>
+      <h2 style={{ margin: "0", marginBottom: "1.63em", color: "#070d17" }}>
         My Professional Journey
       </h2>
       {ExperienceDetails.map((item, index) => {
         return (
-          <TimelineCard key={`Experience-${index}`} left={!(index & 1)}>
+          <TimelineCard
+            key={`Experience-${index}`}
+            left={!(index & 1)}
+            style={timeCardStyles}
+          >
             <div
               className="Experience-items"
               style={
                 index & 1
                   ? {
-                      paddingLeft: "10%",
+                      paddingLeft: "2em",
                       alignItems: "flex-start",
                       textAlign: "start",
                     }
                   : {
-                      paddingRight: "10%",
+                      paddingRight: "2em",
                       alignItems: "flex-end",
                       textAlign: "end",
                     }

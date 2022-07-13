@@ -1,7 +1,9 @@
 import React from "react";
 import "./TimelineCard.css";
+import { Fade, Bounce } from "react-reveal";
 
 export const TimelineCard = (props) => {
+  console.log(props.style);
   return (
     <div className="TimelineCard" id={props.key}>
       <span
@@ -15,18 +17,34 @@ export const TimelineCard = (props) => {
           className="Vertical"
           style={props.left ? { left: "-2px" } : { right: "-2px" }}
         />
-        <span
-          className="Circle"
-          style={props.left ? { left: "-16px" } : { right: "-16px" }}
-        />
-        <span
-          className="Mobile-Circle"
-          style={props.left ? { left: "-6px" } : { right: "-6px" }}
-        />
+        <Bounce duration="2000">
+          <span
+            className="Circle"
+            style={
+              props.left
+                ? { left: "-16px", backgroundColor: props.style.outCircleColor }
+                : {
+                    right: "-16px",
+                    backgroundColor: props.style.outCircleColor,
+                  }
+            }
+          />
+          <span
+            className="Mobile-Circle"
+            style={
+              props.left
+                ? { left: "-6px", backgroundColor: props.style.inCircleColor }
+                : { right: "-6px", backgroundColor: props.style.inCircleColor }
+            }
+          />
+        </Bounce>
       </span>
-      <div className="Timeline-content" style={{ order: props.left ? 1 : 2 }}>
-        {props.children}
-      </div>
+
+      <Fade left={props.left} right={!props.left}>
+        <div className="Timeline-content" style={{ order: props.left ? 1 : 2 }}>
+          {props.children}
+        </div>
+      </Fade>
     </div>
   );
 };

@@ -7,12 +7,13 @@
     font-size: 36px;
     align-items: center;
     justify-content: center;
-    background-color: green;
+    background-color: #fff;
 }
 
 .Experience-items {
     display: flex;
-    background-color: #fff;
+    background-color: #070d17;
+    color: #fff;
     flex-direction: column;
     justify-content: center;
     width: 100%;

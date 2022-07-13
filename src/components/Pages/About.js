@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./About.css";
 import videoBG from "./../../assets/videos/About_bg.mp4";
 import { TypeWriter } from "./../TypeWriter";
+import { Bounce } from "react-reveal";
 
 const TypeWriterWords = [
   "Mohsin !!",
@@ -17,12 +18,16 @@ export const About = () => {
         {"I'm"} <TypeWriter text={"Hello"} words={TypeWriterWords} />
       </div>
       <div className="About-content">
-        {
-          "I'm a Software Engineer, who enjoys writing code and solving problems. Always excited to learn new technologies.\n"
-        }
+        <Bounce right duration="3000">
+          {
+            "I'm a Software Engineer, who enjoys writing code and solving problems. Always excited to learn new technologies.\n"
+          }
+        </Bounce>
         <br />
         <br />
-        {"Want to know more about me? Scroll down"}
+        <Bounce left duration="4000">
+          {"Want to know more about me? Scroll down"}
+        </Bounce>
       </div>
     </div>
   );
