@@ -32,7 +32,8 @@
 @media screen and (max-width: 768px){
     .Experience {
         font-size: 18px;
-        height: calc(var(--page-height) - 150px);
+        height: auto;
+        padding-bottom: 2rem;
     }
     .Experience-items {
         display: flex;

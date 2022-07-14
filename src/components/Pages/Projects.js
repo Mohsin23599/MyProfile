@@ -4,7 +4,7 @@ import { ProjectCard } from "../Utilities/ProjectCard";
 import budgetGIF from "./../../assets/videos/Apna_Budget_Screens.gif";
 import dfmGIF from "./../../assets/videos/DFM.gif";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,23 +15,28 @@ const ProjectDetails = [
     title: "Budget Application",
     imageLink: budgetGIF,
     description:
-      "I recently have joined the Juniper Networs as a Software\
-      Developer-Intern in the DevOps team. My major part of the work has\
-      been into the field of creating sustainable and flexible CI/CD\
-      (Continuous Integration & Continuous Development) pipelines which\
-      enables developers at Juniper to do rapid development.",
-    techStack: ["Skill1", "Skill12", "Skill3", "Skill4"],
+      "A mobile application developed to capture the daily expenses. Major features:",
+    keyPoints: [
+      "One Time Login using OTP",
+      "Authentication and Authorization",
+      "Push Notification",
+      "Graphical representation",
+    ],
+    techStack: ["React-Native", "Firebase", "Expo", "Git"],
+    projectLink: "https://github.com/Mohsin23599/",
   },
   {
-    title: "Budget Application",
+    title: "Digital Frequency Meter",
     imageLink: dfmGIF,
     description:
-      "I recently have joined the Juniper Networs as a Software\
-    Developer-Intern in the DevOps team. My major part of the work has\
-    been into the field of creating sustainable and flexible CI/CD\
-    (Continuous Integration & Continuous Development) pipelines which\
-    enables developers at Juniper to do rapid development.",
-    techStack: ["Skill1", "Skill12", "Skill3", "Skill4"],
+      "Designed and implemented a basic digital frequency meter with self-designed power supply. key features:",
+    keyPoints: [
+      "555 Timer IC used as reference signal generator",
+      "Power Supply with ∓5V, ∓12V, 0V",
+      "Used both analog and digital IC's",
+    ],
+    techStack: ["Multisim", "Vivado"],
+    projectLink: "https://github.com/Mohsin23599/",
   },
 ];
 
@@ -45,15 +50,21 @@ export const Projects = () => {
   }, []);
   return (
     <div id="Projects" className="Projects">
-      <h2 style={{ marginTop: "-2.5rem", paddingBottom: "1rem" }}>
+      <h2 style={{ marginTop: "1.63em", marginBottom: "1.63em" }}>
         My Projects
       </h2>
       <Swiper
         id="Projects-swiper"
-        modules={[Navigation, Pagination]}
         slidesPerView={"auto"}
+        spaceBetween={5}
         navigation
         pagination={{ clickable: true }}
+        loop={true}
+        autoplay={{
+            delay: 1000,
+            disableOnInteraction: false
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
         className="Project-swiper"
       >
         {ProjectDetails.map((item, index) => (
@@ -64,6 +75,8 @@ export const Projects = () => {
               title={item.title}
               description={item.description}
               techStack={item.techStack}
+              keyPoints={item.keyPoints}
+              projectLink={item.projectLink}
             />
           </SwiperSlide>
         ))}

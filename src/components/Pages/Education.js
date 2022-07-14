@@ -26,13 +26,19 @@ export const Education = () => {
   };
   return (
     <div id="Education" className="Education">
-      <h2 style={{ margin: "0", marginBottom: "1.63em", color: "#ffffff" }}>
+      <h2
+        style={{
+          marginTop: "1.63em",
+          marginBottom: "1.63em",
+          color: "#ffffff",
+        }}
+      >
         My Education Journey
       </h2>
       {EducationDetails.map((item, index) => {
         return (
           <TimelineCard
-            key={`Education-${index}`}
+            id={`Education-${index}`}
             left={index & 1}
             style={timeCardStyles}
           >

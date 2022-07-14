@@ -18,14 +18,14 @@ export const About = () => {
         {"I'm"} <TypeWriter text={"Hello"} words={TypeWriterWords} />
       </div>
       <div className="About-content">
-        <Bounce right duration="3000">
+        <Bounce right duration={3000}>
           {
             "I'm a Software Engineer, who enjoys writing code and solving problems. Always excited to learn new technologies.\n"
           }
         </Bounce>
         <br />
         <br />
-        <Bounce left duration="4000">
+        <Bounce left duration={4000}>
           {"Want to know more about me? Scroll down"}
         </Bounce>
       </div>

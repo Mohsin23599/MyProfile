@@ -22,13 +22,19 @@ export const Experience = () => {
   };
   return (
     <div id="Experience" className="Experience">
-      <h2 style={{ margin: "0", marginBottom: "1.63em", color: "#070d17" }}>
+      <h2
+        style={{
+          marginTop: "1.63em",
+          marginBottom: "1.63em",
+          color: "#070d17",
+        }}
+      >
         My Professional Journey
       </h2>
       {ExperienceDetails.map((item, index) => {
         return (
           <TimelineCard
-            key={`Experience-${index}`}
+            id={`Experience-${index}`}
             left={!(index & 1)}
             style={timeCardStyles}
           >
