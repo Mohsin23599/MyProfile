@@ -1,0 +1,53 @@
+.Experience {
+  position: relative;
+  height: var(--page-height);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.Experience-items {
+  display: flex;
+  background-color: #070d17;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.Experience-h1 {
+  font-size: 24px;
+}
+.Experience-h2 {
+  font-size: 20px;
+}
+.Experience-h4 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .Experience {
+    font-size: 18px;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .Experience-items {
+    display: flex;
+  }
+  .Experience-h1 {
+    font-size: 15px;
+    padding-bottom: 0.25rem;
+  }
+  .Experience-h2 {
+    font-size: 13px;
+    padding-bottom: 0.25rem;
+  }
+  .Experience-h4 {
+    font-size: 10px;
+    padding-bottom: 0.25rem;
+  }
+}

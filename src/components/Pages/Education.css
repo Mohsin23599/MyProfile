@@ -1,0 +1,58 @@
+.Education {
+  position: relative;
+  height: var(--page-height);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  align-items: center;
+  justify-content: center;
+  background-color: #070d17;
+}
+
+.Education-items {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.Education-h1 {
+  font-size: 24px;
+}
+.Education-h2 {
+  font-size: 20px;
+}
+.Education-h3 {
+  font-size: 18px;
+}
+.Education-h4 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .Education {
+    font-size: 18px;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+  .Education-items {
+    display: flex;
+  }
+  .Education-h1 {
+    font-size: 15px;
+    padding-bottom: 0.25rem;
+  }
+  .Education-h2 {
+    font-size: 13px;
+    padding-bottom: 0.25rem;
+  }
+  .Education-h3 {
+    font-size: 12px;
+    padding-bottom: 0.25rem;
+  }
+  .Education-h4 {
+    font-size: 10px;
+    padding-bottom: 0.25rem;
+  }
+}

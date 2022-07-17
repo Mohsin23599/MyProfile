@@ -1,0 +1,61 @@
+:root {
+  --page-height: 100vh;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: rgb(5 11 19);
+}
+
+.App-header {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+.Contact-button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: #aaefff;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Contact-button:hover {
+  background-color: #44b2ff;
+}
+.button-name {
+  display: block;
+  margin: 0;
+}
+.button-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .button-icon {
+    display: block;
+  }
+  .button-name {
+    display: none;
+  }
+  .Contact-button {
+    padding: 1rem;
+  }
+}

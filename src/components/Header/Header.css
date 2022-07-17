@@ -1,0 +1,25 @@
+.Header {
+  flex-direction: row;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 5;
+  background-color: #f2f3f7;
+  margin: 0;
+  display: none;
+  position: fixed;
+  width: 100%;
+}
+
+.Header__icon {
+  display: flex;
+  padding-right: 1rem;
+  z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .Header {
+    display: flex;
+  }
+}

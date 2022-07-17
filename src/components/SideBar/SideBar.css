@@ -1,0 +1,33 @@
+:root {
+  --mobile-top: "-100%";
+}
+
+.Side-bar {
+  background: rgb(5 11 19);
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  transition: 300ms ease-out;
+  margin: 0;
+  padding: 0;
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+
+.Side-bar__logo {
+  transition: 500ms ease-out;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .Side-bar {
+    left: auto;
+    right: var(--mobile-top);
+    flex: 1;
+  }
+  .Side-bar__logo {
+    display: none;
+  }
+}

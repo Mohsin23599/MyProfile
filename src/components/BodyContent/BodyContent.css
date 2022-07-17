@@ -1,0 +1,19 @@
+:root {
+  --body-margin-left: "60px";
+}
+
+.Body-Content {
+  display: flex;
+  float: right;
+  flex-grow: 1;
+  margin-left: var(--body-margin-left);
+  flex-direction: column;
+  transition: 300ms ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .Body-Content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

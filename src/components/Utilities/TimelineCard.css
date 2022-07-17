@@ -1,0 +1,53 @@
+.TimelineCard {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+}
+
+.TimelineCard span {
+  margin: 0;
+}
+
+.Timeline-bar {
+  display: flex;
+  position: relative;
+  flex: 1;
+}
+
+.Vertical {
+  position: absolute;
+  display: block;
+  width: 4px;
+  background: #f2f3f7;
+  top: 0;
+  bottom: 0;
+}
+
+.Mobile-Circle {
+  display: block;
+  position: absolute;
+  width: 12px;
+  border-radius: 100%;
+  background: black;
+  top: 47%;
+  bottom: 47%;
+  z-index: 2;
+}
+
+.Circle {
+  position: absolute;
+  display: block;
+  width: 32px;
+  border-radius: 100%;
+  background: #f3d776;
+  top: 42%;
+  bottom: 42%;
+  z-index: 2;
+}
+
+.Timeline-content {
+  display: flex;
+  flex: 1;
+}

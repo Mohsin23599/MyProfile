@@ -1,0 +1,70 @@
+.Contact-modal {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 6;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Contact-modal h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px;
+  opacity: 0.8;
+}
+.close-icon:hover {
+  opacity: 1;
+}
+
+.Contact-modal-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  padding: 10px;
+}
+.Contact-modal-form p {
+  margin-top: 0;
+  color: red;
+  font-size: 12px;
+}
+
+.Contact-modal-label {
+  padding: 10px 0 5px 0;
+}
+.Contact-modal-label:nth-child(1) {
+  padding-top: 0;
+}
+
+.Contact-modal-message {
+  resize: horizontal;
+  max-width: calc(100% - 6px);
+  min-width: 250px;
+  min-height: 150px;
+}
+
+.Contact-modal-submit {
+  margin-top: 1rem;
+  width: fit-content;
+  align-self: center;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  border-width: 1px;
+  background-color: rgb(224, 223, 223);
+}
+
+.Contact-modal-submit:hover {
+  opacity: 1;
+  font-weight: 600;
+}

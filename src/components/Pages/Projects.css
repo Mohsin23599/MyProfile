@@ -1,0 +1,52 @@
+.Projects {
+  position: relative;
+  height: var(--page-height);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #070d17;
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 36px;
+}
+
+.Project-swiper {
+  display: flex;
+  width: 90%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Projects {
+    font-size: 18px;
+    padding-bottom: 2rem;
+  }
+  .swiper-button-next {
+    right: -5px !important;
+    background: none;
+  }
+  .swiper-button-prev {
+    left: -5px !important;
+    background: none;
+  }
+  .Project-swiper {
+    display: flex;
+    width: 80%;
+  }
+}
