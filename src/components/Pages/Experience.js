@@ -19,6 +19,7 @@ export const Experience = () => {
   const timeCardStyles = {
     inCircleColor: "#fff",
     outCircleColor: "#070d17",
+    verticalColor: "#fff",
   };
   return (
     <div id="Experience" className="Experience">

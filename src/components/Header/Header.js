@@ -4,9 +4,15 @@ import { motion } from "framer-motion";
 import "./Header.css";
 
 export const Header = (props) => {
-  return (
+  return !props.mobileNavBarIsOpen ? (
     <motion.div className="Header">
-      <FaBars className="Header__icon" onClick={props.setMobileNavBarIsOpen} size={20}/>
+      <FaBars
+        className="Header__icon"
+        onClick={props.setMobileNavBarIsOpen}
+        size={20}
+      />
     </motion.div>
+  ) : (
+    <></>
   );
 };

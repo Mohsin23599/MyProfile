@@ -21,8 +21,9 @@ const EducationDetails = [
 
 export const Education = () => {
   const timeCardStyles = {
-    outCircleColor: "#1f3e6d",
+    outCircleColor: "#ffffff",
     inCircleColor: "#070d17",
+    verticalColor: "#070d17",
   };
   return (
     <div id="Education" className="Education">
@@ -35,38 +36,40 @@ export const Education = () => {
       >
         My Education Journey
       </h2>
-      {EducationDetails.map((item, index) => {
-        return (
-          <TimelineCard
-            id={`Education-${index}`}
-            left={index & 1}
-            style={timeCardStyles}
-          >
-            <div
-              className="Education-items"
-              style={
-                !(index & 1)
-                  ? {
-                      paddingLeft: "2em",
-                      alignItems: "flex-start",
-                      textAlign: "start",
-                    }
-                  : {
-                      paddingRight: "2em",
-                      alignItems: "flex-end",
-                      textAlign: "end",
-                    }
-              }
+      <>
+        {EducationDetails.map((item, index) => {
+          return (
+            <TimelineCard
+              id={`Education-${index}`}
+              left={index & 1}
+              style={timeCardStyles}
             >
-              <div className="Education-h1">{item.collegeName}</div>
-              <div className="Education-h2">{item.degree}</div>
-              <div className="Education-h3">{item.courseName}</div>
-              <div className="Education-h3">{item.grades}</div>
-              <div className="Education-h4">{item.duration}</div>
-            </div>
-          </TimelineCard>
-        );
-      })}
+              <div
+                className="Education-items"
+                style={
+                  !(index & 1)
+                    ? {
+                        paddingLeft: "2em",
+                        alignItems: "flex-start",
+                        textAlign: "start",
+                      }
+                    : {
+                        paddingRight: "2em",
+                        alignItems: "flex-end",
+                        textAlign: "end",
+                      }
+                }
+              >
+                <div className="Education-h1">{item.collegeName}</div>
+                <div className="Education-h2">{item.degree}</div>
+                <div className="Education-h3">{item.courseName}</div>
+                <div className="Education-h3">{item.grades}</div>
+                <div className="Education-h4">{item.duration}</div>
+              </div>
+            </TimelineCard>
+          );
+        })}
+      </>
     </div>
   );
 };

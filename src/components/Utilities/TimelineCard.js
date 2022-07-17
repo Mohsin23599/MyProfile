@@ -14,7 +14,11 @@ export const TimelineCard = (props) => {
       >
         <span
           className="Vertical"
-          style={props.left ? { left: "-2px" } : { right: "-2px" }}
+          style={
+            props.left
+              ? { left: "-2px", backgroundColor: props.style.verticalColor }
+              : { right: "-2px", backgroundColor: props.style.verticalColor }
+          }
         />
         <Bounce duration={2000}>
           <span
@@ -39,7 +43,7 @@ export const TimelineCard = (props) => {
         </Bounce>
       </span>
 
-      <Fade left={props.left? true: false} right={props.left?false: true}>
+      <Fade left={props.left ? true : false} right={props.left ? false : true}>
         <div className="Timeline-content" style={{ order: props.left ? 1 : 2 }}>
           {props.children}
         </div>

@@ -61,8 +61,8 @@ export const Projects = () => {
         pagination={{ clickable: true }}
         loop={true}
         autoplay={{
-            delay: 1000,
-            disableOnInteraction: false
+          delay: 2500,
+          disableOnInteraction: false,
         }}
         modules={[Navigation, Pagination, Autoplay]}
         className="Project-swiper"
