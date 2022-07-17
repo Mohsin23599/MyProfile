@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4c474b8c.css",
+    "main.js": "/static/js/main.f3953d96.js",
+    "static/media/About_bg.mp4": "/static/media/About_bg.217bc138c2eb8d98fc50.mp4",
+    "static/media/DFM.gif": "/static/media/DFM.0f9d1227091c92fc1d58.gif",
+    "static/media/Apna_Budget_Screens.gif": "/static/media/Apna_Budget_Screens.5e8584562454e8b59fca.gif",
+    "static/media/side-bar_logo.png": "/static/media/side-bar_logo.8a5022f514ecbb11d62e.png",
+    "index.html": "/index.html",
+    "main.4c474b8c.css.map": "/static/css/main.4c474b8c.css.map",
+    "main.f3953d96.js.map": "/static/js/main.f3953d96.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c474b8c.css",
+    "static/js/main.f3953d96.js"
+  ]
+}
