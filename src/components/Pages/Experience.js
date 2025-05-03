@@ -5,7 +5,7 @@ import { TimelineCard } from "./../Utilities/TimelineCard";
 const ExperienceDetails = [
   {
     companyName: "Qualcomm India Pvt. Ltd.",
-    role: "Associate Engineer - Modem RF Software Engineer",
+    role: "Senior Software Engineer",
     duration: "June, 2021 - Present",
   },
   {
